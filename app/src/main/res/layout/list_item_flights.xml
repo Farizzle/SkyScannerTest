@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/outbound_flight_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/outbound_airline_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:id="@+id/outbound_flight_details_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/outbound_airline_image"
+                    android:layout_alignBottom="@id/outbound_airline_image"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/outbound_airline_image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/outbound_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        tools:text="15:35 - 17:00" />
+
+                    <TextView
+                        android:id="@+id/outbound_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        tools:text="BUD-LGW, WizzAir" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/outbound_flight_details_container"
+                    android:layout_alignBottom="@id/outbound_flight_details_container"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/outbound_path"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        tools:text="Direct" />
+
+                    <TextView
+                        android:id="@+id/outbound_duration"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        tools:text="2h 25m" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/inbound_flight_container"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/outbound_flight_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/inbound_airline_image"
+                    android:layout_width="60dp"
+                    android:scaleType="fitCenter"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:id="@+id/inbound_flight_details_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/inbound_airline_image"
+                    android:layout_alignBottom="@id/inbound_airline_image"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/inbound_airline_image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/inbound_time"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        tools:text="15:35 - 17:00" />
+
+                    <TextView
+                        android:id="@+id/inbound_details"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        tools:text="BUD-LGW, WizzAir" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/inbound_flight_details_container"
+                    android:layout_alignBottom="@id/inbound_flight_details_container"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/inbound_path"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        tools:text="Direct" />
+
+                    <TextView
+                        android:id="@+id/inbound_duration"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        tools:text="2h 25m" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/seperator"
+                android:layout_width="match_parent"
+                android:background="@color/greyish"
+                android:layout_below="@id/inbound_flight_container"
+                android:layout_height="0.5dp"/>
+
+            <LinearLayout
+                android:id="@+id/flight_price_container"
+                android:orientation="vertical"
+                android:layout_below="@+id/seperator"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/flight_price"
+                    android:fontFamily="@font/roboto_bold"
+                    tools:text="£35"
+                    android:layout_weight="0.5"
+                    android:textSize="24sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/flight_price_provider"
+                    tools:text="via Wizzair.com"
+                    android:fontFamily="@font/roboto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
